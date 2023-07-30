@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Getting Started with XON Academy
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is available on github [Create React App](https://github.com/Qoqondabitta/housing.git).
+
+# can see the DEMO [Housing](https://github.com/Qoqondabitta/housing.git)
 
 ## Available Scripts
 
