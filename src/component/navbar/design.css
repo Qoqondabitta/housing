@@ -1,0 +1,14 @@
+/* .container{
+    padding: 0;
+} */
+.wrapper{
+    /* width: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--colorPrimary);
+    color: #fff;
+    padding: var(--padding);
+    height: 64px;
+    font-size: 16px;
+}
