@@ -1,0 +1,42 @@
+
+/* .container{
+    padding: 0;
+} */
+.wrapper{
+    /* width: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--colorPrimary);
+    color: rgb(54, 240, 54);
+    padding: var(--padding);
+    height: 64px;
+    font-size: 16px;
+}
+.section .active{
+    color: rgb(137, 189, 59);
+    color: rgb(221, 218, 218);
+}
+
+
+#greyIconBack:hover #greyIconBackWrap{
+    background-color: rgb(221, 218, 218);
+}
+
+#greyIconBack:active #greyIconBackWrap{
+    background-color: rgb(221, 218, 218);
+}
+
+#greyIconBackWrap:hover{
+    background-color: rgb(221, 218, 218);
+}
+
+#greyIconBackWrap:active{
+    background-color: rgb(221, 218, 218);
+}
+
+  @media screen and (max-width: 426px) {
+    #noneDisplay{
+        display: none;
+    }
+  }

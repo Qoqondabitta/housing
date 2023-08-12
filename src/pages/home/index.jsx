@@ -1,5 +1,5 @@
 import Home from '../../component/home'
 
-const Homepage = () => Home
+const Homepage = () => <Home />
 
 export default Homepage
