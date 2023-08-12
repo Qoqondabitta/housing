@@ -3,13 +3,13 @@ import { Outlet } from "react-router-dom";
 import "./design.css";
 import { Container, Wrapper, Section } from "./style";
 // import { Container, Wrapper, Section, Logo } from "./style";
-import logoImg from "../../Assets/image/Vector.png"
+import logoImg from "../../Assets/image/logo.png"
 
 const Navbar = () => {
   return (
     <Container>
       <Wrapper>
-        <Section>1</Section>
+        <Section><img src={logoImg} alt="" /></Section>
         <Section>2</Section>
         <Section>3</Section>
       </Wrapper>
