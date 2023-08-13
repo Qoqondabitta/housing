@@ -1,58 +1,30 @@
-<<<<<<< HEAD
-import React from "react";
-import { Outlet } from "react-router-dom";
-import "./design.css";
-import { Container, Wrapper, Section } from "./style";
-// import { Container, Wrapper, Section, Logo } from "./style";
-import logoImg from "../../Assets/image/logo.png"
-
-const Navbar = () => {
-  return (
-    <Container>
-      <Wrapper>
-        <Section><img src={logoImg} alt="" /></Section>
-        <Section>2</Section>
-        <Section>3</Section>
-      </Wrapper>
-      <Outlet />
-    </Container>
-    // ==========================================
-    // <div className="container">
-    //   <div className="wrapper">
-    //     <div className="section">1</div>
-    //     <div className="section">2</div>
-    //     <div className="section">3</div>
-    //   </div>
-    //   <Outlet />
-    // </div>
-=======
-import React, { useState } from "react";
-import { useNavigate, Outlet } from "react-router-dom";
-import "./design.css";
-import navbar from "../../utils/navbar";
-import {
-  Container,
-  Burger,
-  Main,
-  Section,
-  Link,
-  Wrapper,
-  Buttons,
-  BurgerMenu,
-  Box,
-  BurgerSection,
-  Social,
-  SocialIcon,
-  Image
-} from "./style";
-import logoImg from "../../Assets/image/logo.png";
-import Close from "../../Assets/image/Frame.png";
-import NavBurger from "../../Assets/image/nav.png";
-import Instagram from "../../Assets/image/instagramBurger.png";
-import Linkedin from "../../Assets/image/linkedinBurger.png";
-import Twitter from "../../Assets/image/twitterBurger.png";
-import Facebook from "../../Assets/image/facebookBurger.png";
-import UserLogin from "../../Assets/image/login.png";
+      import React, { useState } from "react";
+      import { useNavigate, Outlet } from "react-router-dom";
+      import "./design.css";
+      import navbar from "../../utils/navbar";
+      import {
+        Container,
+        Burger,
+        Main,
+        Section,
+        Link,
+        Wrapper,
+        Buttons,
+        BurgerMenu,
+        Box,
+        BurgerSection,
+        Social,
+        SocialIcon,
+        Image
+      } from "./style";
+      import logoImg from "../../Assets/image/logo.png";
+      import Close from "../../Assets/image/Frame.png";
+      import NavBurger from "../../Assets/image/nav.png";
+      import Instagram from "../../Assets/image/instagramBurger.png";
+      import Linkedin from "../../Assets/image/linkedinBurger.png";
+      import Twitter from "../../Assets/image/twitterBurger.png";
+      import Facebook from "../../Assets/image/facebookBurger.png";
+      import UserLogin from "../../Assets/image/login.png";
 
 const Navbar = () => {
   const [display, setDisplay] = useState(false);
@@ -73,7 +45,7 @@ const Navbar = () => {
               <Box>
                 <BurgerSection>
                   {navbar.map((value, index) => {
-                    return (
+                    return !value.hidden && (
                       <Link
                         className={({ isActive }) => isActive && "active"}
                         style={{
@@ -136,7 +108,7 @@ const Navbar = () => {
           </Section>
           <Section id="noneDisplay">
             {navbar.map((value, index) => {
-              return (
+              return !value.hidden && (
                 <Link
                   className={({ isActive }) => isActive && "active"}
                   key={index}
@@ -155,7 +127,6 @@ const Navbar = () => {
       </Main>
       <Outlet />
     </Container>
->>>>>>> 56e67ece83a5f4d682f26c89c443bd33c43bc36f
   );
 };
 
