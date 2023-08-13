@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-import { Outlet } from "react-router-dom";
-import "./design.css";
-import { Container, Wrapper, Section } from "./style";
-// import { Container, Wrapper, Section, Logo } from "./style";
-import logoImg from "../../Assets/image/logo.png"
-
-const Navbar = () => {
-  return (
-    <Container>
-      <Wrapper>
-        <Section><img src={logoImg} alt="" /></Section>
-        <Section>2</Section>
-        <Section>3</Section>
-      </Wrapper>
-      <Outlet />
-    </Container>
-    // ==========================================
-    // <div className="container">
-    //   <div className="wrapper">
-    //     <div className="section">1</div>
-    //     <div className="section">2</div>
-    //     <div className="section">3</div>
-    //   </div>
-    //   <Outlet />
-    // </div>
-=======
 import React, { useState } from "react";
 import { useNavigate, Outlet } from "react-router-dom";
 import "./design.css";
@@ -155,7 +127,6 @@ const Navbar = () => {
       </Main>
       <Outlet />
     </Container>
->>>>>>> 56e67ece83a5f4d682f26c89c443bd33c43bc36f
   );
 };
 
