@@ -1,11 +1,11 @@
 import React from 'react'
-import { Container } from './style'
+import { ContainerButton } from './style'
 
 const Button = ({children, type, onClick}) => {
   return (
-    <Container type={type} onClick={onClick}>
+    <ContainerButton type={type} onClick={onClick}>
         {children || "Submit"}
-    </Container>
+    </ContainerButton>
   )
 }
 

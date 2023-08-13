@@ -15,11 +15,12 @@ const getType = ({ type }) => {
         color: "#e6e9ec",
       };
     default:
-      return { background: `#061df`, border: "none", color: "#fff", padding: "12px 40px" };
+      // return { background: `#061df`, border: "none", color: "#fff", padding: "12px 40px" };
+      return { background: `blue`, border: "none", color: "#fff", padding: "12px 40px" };
   }
 };
 
-const Container = styled.button`
+const ContainerButton = styled.button`
   height: ${({ height }) => (height ? `${height}px` : "44px")};
   width: ${({ width }) => (width ? `${width}px` : "130px")};
   font-size: ${({ fontSize }) => (fontSize ? `${fontSize}px` : "14px")};
@@ -31,4 +32,4 @@ const Container = styled.button`
   }
 `;
 
-export { Container };
+export { ContainerButton };
