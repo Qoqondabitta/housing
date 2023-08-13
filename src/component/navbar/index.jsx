@@ -1,30 +1,30 @@
-import React, { useState } from "react";
-import { useNavigate, Outlet } from "react-router-dom";
-import "./design.css";
-import navbar from "../../utils/navbar";
-import {
-  Container,
-  Burger,
-  Main,
-  Section,
-  Link,
-  Wrapper,
-  Buttons,
-  BurgerMenu,
-  Box,
-  BurgerSection,
-  Social,
-  SocialIcon,
-  Image
-} from "./style";
-import logoImg from "../../Assets/image/logo.png";
-import Close from "../../Assets/image/Frame.png";
-import NavBurger from "../../Assets/image/nav.png";
-import Instagram from "../../Assets/image/instagramBurger.png";
-import Linkedin from "../../Assets/image/linkedinBurger.png";
-import Twitter from "../../Assets/image/twitterBurger.png";
-import Facebook from "../../Assets/image/facebookBurger.png";
-import UserLogin from "../../Assets/image/login.png";
+      import React, { useState } from "react";
+      import { useNavigate, Outlet } from "react-router-dom";
+      import "./design.css";
+      import navbar from "../../utils/navbar";
+      import {
+        Container,
+        Burger,
+        Main,
+        Section,
+        Link,
+        Wrapper,
+        Buttons,
+        BurgerMenu,
+        Box,
+        BurgerSection,
+        Social,
+        SocialIcon,
+        Image
+      } from "./style";
+      import logoImg from "../../Assets/image/logo.png";
+      import Close from "../../Assets/image/Frame.png";
+      import NavBurger from "../../Assets/image/nav.png";
+      import Instagram from "../../Assets/image/instagramBurger.png";
+      import Linkedin from "../../Assets/image/linkedinBurger.png";
+      import Twitter from "../../Assets/image/twitterBurger.png";
+      import Facebook from "../../Assets/image/facebookBurger.png";
+      import UserLogin from "../../Assets/image/login.png";
 
 const Navbar = () => {
   const [display, setDisplay] = useState(false);
@@ -45,7 +45,7 @@ const Navbar = () => {
               <Box>
                 <BurgerSection>
                   {navbar.map((value, index) => {
-                    return (
+                    return !value.hidden && (
                       <Link
                         className={({ isActive }) => isActive && "active"}
                         style={{
@@ -108,7 +108,7 @@ const Navbar = () => {
           </Section>
           <Section id="noneDisplay">
             {navbar.map((value, index) => {
-              return (
+              return !value.hidden && (
                 <Link
                   className={({ isActive }) => isActive && "active"}
                   key={index}

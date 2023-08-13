@@ -39,6 +39,7 @@ const Section = styled.div`
 const Logo = styled.img``;
 
 const Buttons = styled.button`
+  font-size: 14px;  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,6 +48,10 @@ const Buttons = styled.button`
   color: #fff;
   border-radius: 2px;
   border: 1px solid #fff;
+  cursor: pointer; 
+  :active{
+    opacity: 0.5;
+  }
   @media screen and (max-width: 426px) {
     display: none;
   }
@@ -116,7 +121,7 @@ const BurgerSection = styled.div`
 `;
 
 const Image = styled.img`
-display: none;
+  display: none;
   @media screen and (max-width: 426px) {
     display: flex;
   }
