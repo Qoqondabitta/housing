@@ -25,6 +25,8 @@ import Linkedin from "../../Assets/image/linkedinBurger.png";
 import Twitter from "../../Assets/image/twitterBurger.png";
 import Facebook from "../../Assets/image/facebookBurger.png";
 import UserLogin from "../../Assets/image/login.png";
+import Filter from "../filter";
+// import FilterDropdown from "../filterDropdown";
 
 const Navbar = () => {
   const [display, setDisplay] = useState(false);
@@ -129,6 +131,7 @@ const Navbar = () => {
           <Image src={UserLogin} />
         </Wrapper>
       </Main>
+      <Filter />
       <Outlet />
     </Container>
   );
