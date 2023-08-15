@@ -4,13 +4,28 @@ import { ReactComponent as AdvancedIcon } from "../../Assets/icon/advancedIcon.s
 
 const Container = styled.div``;
 
+const PostContainer = styled.div`
+  @media screen and (max-width: 426px) {
+    padding: 0px 20px;
+  }
+`;
+
 const FilterWrap = styled.div`
-position: relative;
-padding: 0px 130px;
+  position: relative;
+  padding: 0px 130px;
   display: flex;
   align-items: center;
   gap: 20px;
+  border-radius: 2px;
   height: 64px;
+
+  @media screen and (max-width: 426px) {
+    padding: 24px;
+    flex-direction: column;
+    border: 1px solid #e6e9ec;
+    height: fit-content;
+    margin-top: 508px;
+  }
 `;
 
 const FilterInputWrap = styled.div`
@@ -20,12 +35,17 @@ const FilterInputWrap = styled.div`
   border: 1px solid #e6e9ec;
   padding: 15px;
   width: 100%;
+  @media screen and (max-width: 426px) {
+    padding: 0px 0px 5px 0px;
+    border-bottom: 1px solid #e6e9ec;
+    width: 295px;
+  }
 `;
 
 const FilterButtonWrap = styled.div`
-display: flex;
-gap: 20px;
-`
+  display: flex;
+  gap: 20px;
+`;
 
 const IconsGenerics = styled.div``;
 
@@ -36,4 +56,11 @@ IconsGenerics.AdvancedIcon = styled(HouseIcon)`
   margin-right: 8px;
 `;
 
-export { Container, FilterWrap, IconsGenerics, FilterButtonWrap ,FilterInputWrap };
+export {
+  Container,
+  PostContainer,
+  FilterWrap,
+  IconsGenerics,
+  FilterButtonWrap,
+  FilterInputWrap,
+};

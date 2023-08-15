@@ -41,7 +41,6 @@ const getType = ({ type }) => {
 };
 
 const ContainerButton = styled.button`
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,6 +56,9 @@ const ContainerButton = styled.button`
   cursor: pointer;
   :active {
     opacity: 0.7;
+  }
+  @media screen and (max-width: 426px) {
+    width: 137px;
   }
 `;
 

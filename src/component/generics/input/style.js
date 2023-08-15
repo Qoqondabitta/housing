@@ -21,12 +21,13 @@ const defineInputType = ({ type }) => {
 
 const ContainerInput = styled.input`
   width: ${({ width }) => (width ? `${width}px` : "100%")};
-  /* height: ${({ height }) => (height ? `${height}px` : "44px")}; */
   font-size: ${({ fontSize }) => (fontSize ? `${fontSize}px` : "14px")};
   border-radius: 2px;
   outline: none;
-  /* padding: ${defineInputType}; */
   ${defineInputType}
+  @media screen and (max-width: 426px) {
+padding: 8px 16px;
+}
 `;
 
 export { ContainerInput };
