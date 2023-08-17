@@ -17,6 +17,16 @@ body {
   /* padding: 0 130px; */
 }
 
+.bigTitle {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -0.88px;
+}
+
 .title {
   color: var(--color-2, #0d263b);
   font-family: Montserrat;
@@ -34,4 +44,17 @@ body {
   font-style: normal;
   font-weight: 600;
   line-height: 24px;
+}
+
+@media screen and (max-width: 426px) {
+  .bigTitle {
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 600;
+  }
+  .subtitle {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+  }
 }

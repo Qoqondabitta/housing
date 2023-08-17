@@ -6,6 +6,7 @@ const getType = ({ type }) => {
       return {
         background: "transparent",
         border: "1px solid #fff",
+        padding: "12px 40px",
         color: "#fff",
       };
     case "lightmode":
@@ -54,11 +55,15 @@ const ContainerButton = styled.button`
   line-height: 20px;
   ${getType}
   cursor: pointer;
-  :active {
+  transition: all 0.5s;
+  &:hover{
+    transform: scale(1.15)
+  }
+  &:active {
     opacity: 0.7;
   }
   @media screen and (max-width: 426px) {
-    width: 137px;
+    width: ${({ Mediawidth }) => (Mediawidth ? `180px` : "137px")};
   }
 `;
 

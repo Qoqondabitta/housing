@@ -24,7 +24,7 @@ const FilterWrap = styled.div`
     flex-direction: column;
     border: 1px solid #e6e9ec;
     height: fit-content;
-    margin-top: 508px;
+    margin-top: 580px;
   }
 `;
 
