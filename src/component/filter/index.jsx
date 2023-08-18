@@ -20,8 +20,8 @@ import {
 import { Button, InputGeneral } from "../generics";
 
 const Filter = () => {
-  const countryRef = useRef()
-  const cityRef = useRef()
+  const countryRef = useRef();
+  const cityRef = useRef();
   const regionRef = useRef();
   const zipRef = useRef();
   const roomRef = useRef();
@@ -37,6 +37,7 @@ const Filter = () => {
           <FilterInputWrap>
             <img src={House} alt="" />
             <InputGeneral
+            id="filterMediaBorder"
               type="filter"
               placeholder="Enter an address, neighborhood, city or ZIP Code"
             />
@@ -70,25 +71,25 @@ const Filter = () => {
                   </DropSectionTitles>
                   <DropInputWrap>
                     <InputGeneral
-                    id="inputFilterAdopt"
+                      id="inputFilterAdopt"
                       ref={countryRef}
                       width="200px"
                       placeholder="Country"
                     />
                     <InputGeneral
-                    id="inputFilterAdopt"
+                      id="inputFilterAdopt"
                       ref={regionRef}
                       width="203px"
                       placeholder="Region"
                     />
                     <InputGeneral
-                    id="inputFilterAdopt"
+                      id="inputFilterAdopt"
                       ref={cityRef}
                       width="203px"
                       placeholder="City"
                     />
                     <InputGeneral
-                    id="inputFilterAdopt"
+                      id="inputFilterAdopt"
                       ref={zipRef}
                       width="205px"
                       placeholder="Zip code"

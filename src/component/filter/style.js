@@ -25,6 +25,12 @@ const FilterWrap = styled.div`
     border: 1px solid #e6e9ec;
     height: fit-content;
     margin-top: 580px;
+    /* position: absolute; */
+    z-index: 10000;
+    background: white;
+    position: relative;
+    top: -120px;
+
   }
 `;
 

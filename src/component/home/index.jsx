@@ -1,14 +1,12 @@
 import React from "react";
-// import { Button, InputGeneral } from "../generics";
-// import Button from "../generics/Button";
+import HouseCard from "../houseCards";
 import Slider from "../slider";
 
 const Properties = () => {
   return (
     <div className="container">
       <Slider />
-      {/* <InputGeneral width="200px" placeholder="Type" /> */}
-      {/* <Button type="lightmode">Login</Button> */}
+      <HouseCard />
     </div>
   );
 };

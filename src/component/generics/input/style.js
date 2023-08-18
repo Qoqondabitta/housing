@@ -6,11 +6,11 @@ const defineInputType = ({ type }) => {
       return {
         border: "none",
       };
-      // case "dropdownFilter": return {
-      //   padding: "12px 16px",
-      //   border: "1px solid #e6e9ec",
-        
-      // };
+    // case "dropdownFilter": return {
+    //   padding: "12px 16px",
+    //   border: "1px solid #e6e9ec",
+
+    // };
     default:
       return {
         border: "1px solid #e6e9ec",
@@ -26,8 +26,10 @@ const ContainerInput = styled.input`
   outline: none;
   ${defineInputType}
   @media screen and (max-width: 426px) {
-padding: 8px 16px;
-}
+    padding: 8px 16px;
+    border-bottom: ${({ bottom }) => bottom && "1px solid #e6e9ec "};
+    border: ${({ none }) => none && "none "};
+  }
 `;
 
 export { ContainerInput };

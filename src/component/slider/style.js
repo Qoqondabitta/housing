@@ -4,7 +4,7 @@ const SliderContainer = styled.div`
   height: 571px;
   position: relative;
   @media screen and (max-width: 426px) {
-    top: -660px;
+    top: -732px;
     height: 712px;
   }
 `;
@@ -46,6 +46,10 @@ const SliderContent = styled.div`
   justify-content: center;
   align-items: center;
   gap: 24px;
+  @media screen and (max-width: 426px) {
+ justify-content: flex-start;
+ padding-top: 92px;
+}
 `;
 
 const SliderImage = styled.img`
@@ -53,6 +57,9 @@ const SliderImage = styled.img`
   object-position: center;
   width: 100%;
   height: 571px;
+  @media screen and (max-width: 426px) {
+height: 712px;
+}
 `;
 
 const TitleSection = styled.div`

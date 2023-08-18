@@ -27,7 +27,7 @@ import { ContainerInput } from "./style";
 
 export const InputGeneral = forwardRef(
   (
-    { width, height, type, name, onChange, placeholder, defaultvalue, value },
+    { width, height, type, name, onChange, placeholder, defaultvalue, value, none, bottom },
     ref
   ) => {
     return (
@@ -35,6 +35,8 @@ export const InputGeneral = forwardRef(
         ref={ref}
         width={width}
         height={height}
+        none={none}
+        bottom={bottom}
         name={name}
         value={value}
         defaultValue={defaultvalue}
