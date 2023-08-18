@@ -11,7 +11,6 @@ const Container = styled.div`
 const CardImage = styled.div`
   width: 100%;
   height: 220px;
-  gap: 0px;
 `;
 
 const CardContent = styled.div`
