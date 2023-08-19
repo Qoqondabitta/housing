@@ -4,6 +4,7 @@ import { ReactComponent as resize } from "../../Assets/icon/resize.svg";
 
 const Container = styled.div`
   width: 380px;
+  margin: 0 auto;
   height: 430px;
   border-radius: 3px;
   border: 1px solid var(--border-color, #e6e9ec);
@@ -12,11 +13,21 @@ const Container = styled.div`
   filter: drop-shadow(0px 20px 38px rgba(0, 0, 0, 0.06))
     drop-shadow(0px 7px 46px rgba(0, 0, 0, 0.06))
     drop-shadow(0px 7px 15px rgba(0, 0, 0, 0.06));
+
+  @media screen and (max-width: 426px) {
+    width: 343px;
+    position: relative;
+    top: -620px;
+  }
 `;
 
 const CardImage = styled.img`
   width: 380px;
   height: 220px;
+
+  @media screen and (max-width: 426px) {
+    width: 343px;
+  }
 `;
 
 const CardContent = styled.div`
