@@ -1,4 +1,6 @@
 import { styled } from "styled-components";
+import { ReactComponent as heart } from "../../Assets/icon/love.svg";
+import { ReactComponent as resize } from "../../Assets/icon/resize.svg";
 
 const Container = styled.div`
   width: 380px;
@@ -6,10 +8,14 @@ const Container = styled.div`
   border-radius: 3px;
   border: 1px solid var(--border-color, #e6e9ec);
   background: var(--color-5, #fff);
+
+  filter: drop-shadow(0px 20px 38px rgba(0, 0, 0, 0.06))
+    drop-shadow(0px 7px 46px rgba(0, 0, 0, 0.06))
+    drop-shadow(0px 7px 15px rgba(0, 0, 0, 0.06));
 `;
 
-const CardImage = styled.div`
-  width: 100%;
+const CardImage = styled.img`
+  width: 380px;
   height: 220px;
 `;
 
@@ -48,18 +54,26 @@ const CardDataInnerSection = styled(CardContent)`
 
 const CardPrice = styled.div`
   display: flex;
-  border-top: 1px solid #E6E9EC; 
+  border-top: 1px solid #e6e9ec;
   justify-content: space-between;
   align-items: center;
   padding: 8px 12px 12px 20px;
 `;
 
-const Heart = styled.div`
+const Love = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 60px;
   background: var(--bg-1, #f6f8f9);
   width: 35px;
   height: 35px;
 `;
+
+const Icons = styled.div``;
+
+Icons.Heart = styled(heart)``;
+Icons.Resize = styled(resize)``;
 
 export {
   Container,
@@ -71,5 +85,6 @@ export {
   CardDetailsSection,
   IconCardWrap,
   CardDataInnerSection,
-  Heart
+  Love,
+  Icons,
 };
