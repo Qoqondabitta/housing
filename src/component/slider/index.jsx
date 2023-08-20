@@ -38,11 +38,11 @@ const Slider = () => {
   };
   return (
     <SliderContainer>
-      <SliderIconWrap data-name="right" onClick={onMove} left>
+      <SliderIconWrap data-name="right" onClick={onMove} left={true}>
         <img src={next} alt="" />
       </SliderIconWrap>
 
-      <SliderIconWrap data-name="left" onClick={onMove} rotate right>
+      <SliderIconWrap data-name="left" onClick={onMove} rotate right={true}>
         <img src={next} alt="" />
       </SliderIconWrap>
 

@@ -4,6 +4,8 @@ const Container = styled.div``;
 
 const DropWrap = styled.div`
   position: absolute;
+  z-index: 200000000;
+  background: white;
   right: 130px;
   top: 100%;
   display: flex;
@@ -11,7 +13,6 @@ const DropWrap = styled.div`
   border-radius: 2px;
   width: fit-content;
   padding-top: 30px;
-  border: 1px solid black;
   flex-direction: column;
   gap: 20px;
   @media screen and (max-width: 426px) {

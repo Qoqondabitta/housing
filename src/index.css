@@ -55,6 +55,12 @@ body {
   line-height: 20px;
 }
 
+.inline {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 @media screen and (max-width: 426px) {
   .bigTitle {
     font-size: 28px;

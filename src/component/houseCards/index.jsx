@@ -19,21 +19,26 @@ import Group from "../../Assets/image/bathblack.png";
 import ruler from "../../Assets/image/rulerblack.png";
 import noImage from "../../Assets/image/noimage.png";
 
-const HouseCard = ({url, title, beds, bath, garage, size, info}) => {
+const HouseCard = ({data}) => {
+  const {address, attachments, city, country, description, houseDetails, price, salePrice} = data
   return (
     <Container>
-      <CardImage src={url || noImage} />
+      <CardImage src={attachments[0]?.imgPath || noImage} />
       <CardContent>
         <CardInfo>
           <CardInfoTitle>
-            <h1 className="subtitle">{ title || "New Apartment Nice View" }</h1>
-            <h1 className="miniTitle">{ info || "Quincy St, Brooklyn, NY, USA" }</h1>
+            <h1 className="subtitle inline">
+              {city} {country} {description} 
+            </h1>
+            <h1 className="miniTitle">
+              {address || "Quincy St, Brooklyn, NY, USA"}
+            </h1>
           </CardInfoTitle>
           <CardDetailsSection>
             <CardDataInnerSection>
               <img src={bed} style={{ width: "19px", height: "19px" }} alt="" />
               <h1 className="miniTitle" style={{ fontWeight: "400" }}>
-                {beds || 0} beds
+                {houseDetails?.beds || 0} beds
               </h1>
             </CardDataInnerSection>
             <CardDataInnerSection>
@@ -43,13 +48,13 @@ const HouseCard = ({url, title, beds, bath, garage, size, info}) => {
                 alt=""
               />
               <h1 className="miniTitle" style={{ fontWeight: "400" }}>
-                {bath || 0} baths
+                {houseDetails?.bath || 0} baths
               </h1>
             </CardDataInnerSection>
             <CardDataInnerSection>
               <img src={car} alt="" style={{ width: "19px", height: "19px" }} />
               <h1 className="miniTitle" style={{ fontWeight: "400" }}>
-                {garage || 0} garage
+                {houseDetails?.garage || 0} garage
               </h1>
             </CardDataInnerSection>
             <CardDataInnerSection>
@@ -59,7 +64,7 @@ const HouseCard = ({url, title, beds, bath, garage, size, info}) => {
                 style={{ width: "19px", height: "19px" }}
               />
               <h1 className="miniTitle" style={{ fontWeight: "400" }}>
-                {size || 0} Sq Ft
+                {houseDetails?.area || 0} Sq Ft
               </h1>
             </CardDataInnerSection>
           </CardDetailsSection>
@@ -68,9 +73,9 @@ const HouseCard = ({url, title, beds, bath, garage, size, info}) => {
         <CardPrice>
           <CardDataInnerSection style={{ alignItems: "flex-start" }}>
             <h1 className="miniTitle" style={{ fontSize: "12px" }}>
-              <del> $2,800/mo</del>
+              <del> ${salePrice||0}/mo</del>
             </h1>
-            <h1 className="subtitle">$7,500/mo</h1>
+            <h1 className="subtitle">${price||0}/mo</h1>
           </CardDataInnerSection>
 
           <IconCardWrap>
