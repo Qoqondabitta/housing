@@ -11,7 +11,6 @@ import {
   IconCardWrap,
   Icons,
   Love,
-
 } from "./style";
 import bed from "../../Assets/image/bedblack.png";
 import car from "../../Assets/image/carblack.png";
@@ -19,16 +18,25 @@ import Group from "../../Assets/image/bathblack.png";
 import ruler from "../../Assets/image/rulerblack.png";
 import noImage from "../../Assets/image/noimage.png";
 
-const HouseCard = ({data}) => {
-  const {address, attachments, city, country, description, houseDetails, price, salePrice} = data
+const HouseCard = ({ data = {} }) => {
+  const {
+    address,
+    attachments,
+    city,
+    country,
+    description,
+    houseDetails,
+    price,
+    salePrice,
+  } = data;
   return (
     <Container>
-      <CardImage src={attachments[0]?.imgPath || noImage} />
+      <CardImage src={(attachments && attachments[0]?.imgPath) || noImage} />
       <CardContent>
         <CardInfo>
           <CardInfoTitle>
             <h1 className="subtitle inline">
-              {city} {country} {description} 
+              {city} {country} {description}
             </h1>
             <h1 className="miniTitle">
               {address || "Quincy St, Brooklyn, NY, USA"}
@@ -73,9 +81,9 @@ const HouseCard = ({data}) => {
         <CardPrice>
           <CardDataInnerSection style={{ alignItems: "flex-start" }}>
             <h1 className="miniTitle" style={{ fontSize: "12px" }}>
-              <del> ${salePrice||0}/mo</del>
+              <del> ${salePrice || 0}/mo</del>
             </h1>
-            <h1 className="subtitle">${price||0}/mo</h1>
+            <h1 className="subtitle">${price || 0}/mo</h1>
           </CardDataInnerSection>
 
           <IconCardWrap>

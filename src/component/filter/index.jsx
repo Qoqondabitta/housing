@@ -18,8 +18,14 @@ import {
   DropWrap,
 } from "./stylesecond";
 import { Button, InputGeneral } from "../generics";
+import uzeReplace from "../../hooks/useReplace";
+import { useLocation, useNavigate } from "react-router-dom";
+import useSearch from "../../hooks/useSearch";
 
 const Filter = () => {
+  const navigate = useNavigate()
+const location = useLocation()
+const query = useSearch()
   const countryRef = useRef();
   const cityRef = useRef();
   const regionRef = useRef();
@@ -30,6 +36,12 @@ const Filter = () => {
   const minRef = useRef();
   const maxRef = useRef();
   const [display, setDisplay] = useState(false);
+  console.log(query.get("region"));
+  const onChange = ({ target: { name, value } }) => {
+    // console.log(name, value );
+    navigate(`${location.pathname}${uzeReplace(name, value)}`)
+  };
+  // console.log(useReplace("address", "toshkent"));
   return (
     <Container>
       <PostContainer>
@@ -37,7 +49,7 @@ const Filter = () => {
           <FilterInputWrap>
             <img src={House} alt="" />
             <InputGeneral
-            id="filterMediaBorder"
+              id="filterMediaBorder"
               type="filter"
               placeholder="Enter an address, neighborhood, city or ZIP Code"
             />
@@ -70,25 +82,37 @@ const Filter = () => {
                     Address
                   </DropSectionTitles>
                   <DropInputWrap>
-                    <InputGeneral
+                    <InputGeneral 
+                      onChange={onChange}
+                      defaultValue={query.get("country")}
+                      name="country"
                       id="inputFilterAdopt"
                       ref={countryRef}
                       width="200px"
                       placeholder="Country"
                     />
                     <InputGeneral
+                      onChange={onChange}
+                      defaultValue={query.get("region")}
+                      name="region"
                       id="inputFilterAdopt"
                       ref={regionRef}
                       width="203px"
                       placeholder="Region"
                     />
                     <InputGeneral
+                      onChange={onChange}
+                      defaultValue={query.get("city")}
+                      name="city"
                       id="inputFilterAdopt"
                       ref={cityRef}
                       width="203px"
                       placeholder="City"
                     />
                     <InputGeneral
+                      onChange={onChange}
+                      defaultValue={query.get("zip_code")}
+                      name="zip_code"
                       id="inputFilterAdopt"
                       ref={zipRef}
                       width="205px"
