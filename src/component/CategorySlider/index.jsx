@@ -25,6 +25,8 @@ const navigate = useNavigate()
   const onChange = (currentSlide) => {
     console.log(currentSlide);
   };
+
+  console.log(url);
   // === function that will move cards of slider
   const onMove = ({
     target: {
@@ -45,11 +47,11 @@ const navigate = useNavigate()
   console.log(data);
   return (
     <SliderContainer>
-      <SliderIconWrap data-name="right" onClick={onMove} left={true}>
+      <SliderIconWrap data-name="right" onClick={onMove} left={"true"}>
         <img src={next} alt="" />
       </SliderIconWrap>
 
-      <SliderIconWrap data-name="left" onClick={onMove} rotate right={true}>
+      <SliderIconWrap data-name="left" onClick={onMove} rotate="true" right={"true"}>
         <img src={next} alt="" />
       </SliderIconWrap>
 

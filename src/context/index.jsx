@@ -10,7 +10,7 @@ const RootContext = ({ children }) => {
     // <Root.Provider>
     <>
       {/* <PropertiesProvider value={[state, dispatch]}> */}
-      <PropertiesProvider>{children}</PropertiesProvider>
+      <PropertiesProvider value="">{children}</PropertiesProvider>
       {/* </Root.Provider> */}
     </>
   );

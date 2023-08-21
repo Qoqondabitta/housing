@@ -63,7 +63,7 @@ const ContainerButton = styled.button`
     opacity: 0.7;
   }
   @media screen and (max-width: 426px) {
-    width: ${({ Mediawidth }) => (Mediawidth ? `180px` : "137px")};
+    width: ${({ mediawidth }) => (mediawidth ? `180px` : "137px")};
   }
 `;
 

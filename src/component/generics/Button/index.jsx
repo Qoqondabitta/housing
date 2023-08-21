@@ -1,13 +1,13 @@
 import React from 'react'
 import { ContainerButton } from './style'
 
-const Button = ({children, type, onClick, width, Mediawidth}) => {
+const Button = ({children, type, onClick, width, mediawidth}) => {
   return (
     <ContainerButton
       type={type}
       onClick={onClick}
       width={width}
-      Mediawidth={Mediawidth}
+      Mediawidth={mediawidth}
     >
       {children || "Submit"}
     </ContainerButton>

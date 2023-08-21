@@ -23,9 +23,9 @@ import { useLocation, useNavigate } from "react-router-dom";
 import useSearch from "../../hooks/useSearch";
 
 const Filter = () => {
-  const navigate = useNavigate()
-const location = useLocation()
-const query = useSearch()
+  const navigate = useNavigate();
+  const location = useLocation();
+  const query = useSearch();
   const countryRef = useRef();
   const cityRef = useRef();
   const regionRef = useRef();
@@ -39,7 +39,7 @@ const query = useSearch()
   console.log(query.get("region"));
   const onChange = ({ target: { name, value } }) => {
     // console.log(name, value );
-    navigate(`${location.pathname}${uzeReplace(name, value)}`)
+    navigate(`${location.pathname}${uzeReplace(name, value)}`);
   };
   // console.log(useReplace("address", "toshkent"));
   return (
@@ -82,7 +82,7 @@ const query = useSearch()
                     Address
                   </DropSectionTitles>
                   <DropInputWrap>
-                    <InputGeneral 
+                    <InputGeneral
                       onChange={onChange}
                       defaultValue={query.get("country")}
                       name="country"
