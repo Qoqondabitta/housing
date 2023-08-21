@@ -18,7 +18,7 @@ import Group from "../../Assets/image/bathblack.png";
 import ruler from "../../Assets/image/rulerblack.png";
 import noImage from "../../Assets/image/noimage.png";
 
-const HouseCard = ({ data = {} }) => {
+const HouseCard = ( { data = {} } ) => {
   const {
     address,
     attachments,
@@ -28,6 +28,7 @@ const HouseCard = ({ data = {} }) => {
     houseDetails,
     price,
     salePrice,
+    category
   } = data;
   return (
     <Container>
@@ -36,10 +37,10 @@ const HouseCard = ({ data = {} }) => {
         <CardInfo>
           <CardInfoTitle>
             <h1 className="subtitle inline">
-              {city} {country} {description}
+              ({city} {country} {description}||"Decent House Nice View")
             </h1>
             <h1 className="miniTitle">
-              {address || "Quincy St, Brooklyn, NY, USA"}
+              {address || "Quincy St, Brooklyn, NY, USA"} - {category?.name || "Category"}
             </h1>
           </CardInfoTitle>
           <CardDetailsSection>

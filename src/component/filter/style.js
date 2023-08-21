@@ -2,7 +2,8 @@ import { styled } from "styled-components";
 import { ReactComponent as HouseIcon } from "../../Assets/icon/houseIcon.svg";
 import { ReactComponent as AdvancedIcon } from "../../Assets/icon/advancedIcon.svg";
 
-const Container = styled.div``;
+const Container = styled.div`
+`;
 
 const PostContainer = styled.div`
   @media screen and (max-width: 426px) {
@@ -19,6 +20,10 @@ const FilterWrap = styled.div`
   border-radius: 2px;
   height: 64px;
 
+  /* width: 100%; */
+  /* max-width: 1440px; */
+
+  margin: auto;
   @media screen and (max-width: 426px) {
     padding: 24px;
     flex-direction: column;
@@ -30,7 +35,6 @@ const FilterWrap = styled.div`
     background: white;
     position: relative;
     top: -120px;
-
   }
 `;
 

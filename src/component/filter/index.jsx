@@ -103,7 +103,7 @@ const query = useSearch()
                     <InputGeneral
                       onChange={onChange}
                       defaultValue={query.get("city")}
-                      name="city"
+                      name="address"
                       id="inputFilterAdopt"
                       ref={cityRef}
                       width="203px"
