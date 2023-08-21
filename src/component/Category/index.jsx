@@ -9,13 +9,13 @@ import {
 import noImage from "../../Assets/image/noimage.png";
 import category from "../../Assets/image/villa.png";
 
-const Category = ({ data = {} }) => {
+const Category = ({ onClick, data = {} }) => {
   const { name } = data;
   return (
-    <Container>
+    <Container onClick={onClick}>
       <CategoryImage src={category || noImage} />
       <CategoryWrap>
-      <Blur />
+        <Blur />
         <CategoryTitle>{name || "Category Name"}</CategoryTitle>
       </CategoryWrap>
     </Container>
