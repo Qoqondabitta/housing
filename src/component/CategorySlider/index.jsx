@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import { SliderContainer, SliderIconWrap } from "./style";
-// import { Blur, TitleSection, DetailsSection, SliderContainer, SliderContent, SliderIconWrap, SliderImage, DataInnerSection } from "./style";
 import { Carousel } from "antd";
 import next from "../../Assets/image/nextArrow.png";
 import Category from "../Category";
