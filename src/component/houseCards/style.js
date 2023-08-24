@@ -12,11 +12,17 @@ const Container = styled.div`
   filter: drop-shadow(0px 20px 38px rgba(0, 0, 0, 0.06))
     drop-shadow(0px 7px 46px rgba(0, 0, 0, 0.06))
     drop-shadow(0px 7px 15px rgba(0, 0, 0, 0.06));
+  @media screen and (max-width: 426px) {
+    width: 343px;
+  }
 `;
 
 const CardImage = styled.img`
   width: 380px;
   height: 220px;
+  @media screen and (max-width: 426px) {
+    width: 343px;
+  }
 `;
 
 const CardContent = styled.div`
@@ -38,8 +44,8 @@ const CardDetailsSection = styled.div`
   display: flex;
   height: 40px;
   align-items: center;
-  justify-content: center;
-  gap: 35px;
+  justify-content: space-between;
+  /* gap: 35px; */
 `;
 
 const IconCardWrap = styled(CardDetailsSection)`

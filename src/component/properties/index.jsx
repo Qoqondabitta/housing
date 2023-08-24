@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import HouseCard from "../houseCards";
+import { ContainerProperty } from "./style";
 const { REACT_APP_BASE_URL: url } = process.env;
 
 
@@ -16,11 +17,11 @@ const Home = (props) => {
       });
   }, [search]);
   return (
-    <div className="container">
+    <ContainerProperty>
       {data.map((value)=>{
         return <HouseCard data={value} />
       })}
-    </div>
+    </ContainerProperty>
   );
 };
 

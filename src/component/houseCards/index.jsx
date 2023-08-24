@@ -37,10 +37,13 @@ const HouseCard = ( { data = {} } ) => {
         <CardInfo>
           <CardInfoTitle>
             <h1 className="subtitle inline">
-              ({city} {country} {description}||"Decent House Nice View")
+              {city || "Decent House Nice View"}{" "}
+              {country || "Decent House Nice View"}{" "}
+              {description || "Decent House Nice View"}
             </h1>
             <h1 className="miniTitle">
-              {address || "Quincy St, Brooklyn, NY, USA"} - {category?.name || "Category"}
+              {address || "Quincy St, Brooklyn, NY, USA"} -{" "}
+              {category?.name || "Category"}
             </h1>
           </CardInfoTitle>
           <CardDetailsSection>
