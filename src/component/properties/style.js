@@ -6,10 +6,11 @@ const ContainerProperty = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  padding: 0 130px;
+  justify-content: space-between;
   gap: 20px;
   max-width: 1440px;
-  width: 100%;
+  /* width: 100%; */
   margin: auto;
 `;
 
