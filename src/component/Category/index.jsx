@@ -9,7 +9,7 @@ import {
 import noImage from "../../Assets/image/noimage.png";
 import category from "../../Assets/image/villa.png";
 
-const Category = ({ onClick, data = {} }) => {
+const CategoryCard = ({ onClick, data = {} }) => {
   const { name } = data;
   return (
     <Container onClick={onClick}>
@@ -22,4 +22,4 @@ const Category = ({ onClick, data = {} }) => {
   );
 };
 
-export default Category;
+export default CategoryCard;
