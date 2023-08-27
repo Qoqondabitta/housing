@@ -7,7 +7,7 @@ const SliderContainer = styled.div`
   max-width: 1440px;
 
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   margin: auto;
   /* @media screen and (max-width: 426px) {
     top: -732px;
