@@ -11,9 +11,13 @@ const settings = {
   classname: "center",
   centerMode: true,
   infinite: true,
-  centerPadding: "60px",
+  centerPadding: "20px",
   slidesToShow: 3,
   speed: 500,
+  arrows: true,
+  dots: true,
+
+  appendDots: (dots) => <h1>{dots}</h1>,
 };
 
 const CategorySlider = () => {
@@ -35,7 +39,7 @@ const CategorySlider = () => {
         {data.map((value) => {
           return (
             <CategoryCard
-              onClick={() => navigate(`./properties?category=${value?.name}`)}
+              onClick={() => navigate(`/properties?category_id=${value?.id}`)}
               data={value}
             />
           );

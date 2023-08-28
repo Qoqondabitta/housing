@@ -74,3 +74,7 @@ body {
     font-weight: 400;
   }
 }
+
+.slick-prev:before, .slick-next:before{
+color: black !important;
+}

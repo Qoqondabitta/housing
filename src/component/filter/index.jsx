@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./design.css";
 import {
   Container,
@@ -7,6 +7,8 @@ import {
   FilterButtonWrap,
   IconsGenerics,
   PostContainer,
+  FilterSelect,
+  FilterOption,
 } from "./style";
 import Search from "../../Assets/image/loupe.png";
 import House from "../../Assets/icon/advancedIcon.svg";
@@ -22,7 +24,11 @@ import uzeReplace from "../../hooks/useReplace";
 import { useLocation, useNavigate } from "react-router-dom";
 import useSearch from "../../hooks/useSearch";
 
+
 const Filter = () => {
+  const [data, setData] = useState([]);
+  
+  const { REACT_APP_BASE_URL: url } = process.env;
   const navigate = useNavigate();
   const location = useLocation();
   const query = useSearch();
@@ -31,7 +37,7 @@ const Filter = () => {
   const regionRef = useRef();
   const zipRef = useRef();
   const roomRef = useRef();
-  const sizeRef = useRef();
+  // const sizeRef = useRef();
   const sortRef = useRef();
   const minRef = useRef();
   const maxRef = useRef();
@@ -41,6 +47,14 @@ const Filter = () => {
     // console.log(name, value );
     navigate(`${location.pathname}${uzeReplace(name, value)}`);
   };
+  useEffect(() => {
+    fetch(`${url}/categories/list`)
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res);
+        setData(res?.data || []);
+      });
+  }, []);
   // console.log(useReplace("address", "toshkent"));
   return (
     <Container>
@@ -131,15 +145,24 @@ const Filter = () => {
                       placeholder="Rooms"
                     />
                     <InputGeneral
-                      ref={sizeRef}
-                      width="203px"
-                      placeholder="Size"
-                    />
-                    <InputGeneral
                       ref={sortRef}
                       width="203px"
                       placeholder="Sort"
                     />
+                    {/* <InputGeneral
+                      ref={sizeRef}
+                      width="203px"
+                      placeholder="Size"
+                    /> */}
+                    <FilterSelect width="203px" value="">
+                      {data.map( (value) => {
+                        return (
+                          <FilterOption width="203px" value={value?.id} name="" id="">
+                            {value?.name}
+                          </FilterOption>
+                        );
+                      } )}
+                    </FilterSelect>
                   </DropInputWrap>
                 </DropSection>
                 <DropSection>

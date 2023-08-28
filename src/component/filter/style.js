@@ -2,8 +2,7 @@ import { styled } from "styled-components";
 import { ReactComponent as HouseIcon } from "../../Assets/icon/houseIcon.svg";
 import { ReactComponent as AdvancedIcon } from "../../Assets/icon/advancedIcon.svg";
 
-const Container = styled.div`
-`;
+const Container = styled.div``;
 
 const PostContainer = styled.div`
   @media screen and (max-width: 426px) {
@@ -52,6 +51,29 @@ const FilterInputWrap = styled.div`
   }
 `;
 
+const FilterSelect = styled.select`
+  width: 203px;
+  border: none;
+  padding: 12px 16px;
+  border: 1px solid #e6e9ec;
+  outline: none;
+  /* width: ${({ width }) => (width ? `${width}px` : "100%")}; */
+`;
+
+const FilterOption = styled.option`
+  /* width: ${({ width }) => (width ? `${width}px` : "100%")}; */
+  outline: none;
+  /* border: 1px solid #e6e9ec; */
+  padding: 12px 16px;
+  color: grey;
+  
+
+  /* background-color: rgb(218, 214, 214); */
+  background: transparent;
+  border: none;
+  width: 203px;
+`;
+
 const FilterButtonWrap = styled.div`
   display: flex;
   gap: 20px;
@@ -73,4 +95,6 @@ export {
   IconsGenerics,
   FilterButtonWrap,
   FilterInputWrap,
+  FilterSelect,
+  FilterOption,
 };
