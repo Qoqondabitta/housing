@@ -23,6 +23,8 @@ import { Button, InputGeneral } from "../generics";
 import uzeReplace from "../../hooks/useReplace";
 import { useLocation, useNavigate } from "react-router-dom";
 import useSearch from "../../hooks/useSearch";
+import {Select} from "antd"
+
 
 
 const Filter = () => {
@@ -154,7 +156,7 @@ const Filter = () => {
                       width="203px"
                       placeholder="Size"
                     /> */}
-                    <FilterSelect width="203px" value="">
+                    <FilterSelect defaultValue={44} width="203px" value="">
                       {data.map( (value) => {
                         return (
                           <FilterOption width="203px" value={value?.id} name="" id="">

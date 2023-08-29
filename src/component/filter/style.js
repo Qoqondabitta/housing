@@ -66,7 +66,7 @@ const FilterOption = styled.option`
   /* border: 1px solid #e6e9ec; */
   padding: 12px 16px;
   color: grey;
-  
+  line-height: 20px;
 
   /* background-color: rgb(218, 214, 214); */
   background: transparent;
