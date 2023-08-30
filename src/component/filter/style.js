@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 import { ReactComponent as HouseIcon } from "../../Assets/icon/houseIcon.svg";
 import { ReactComponent as AdvancedIcon } from "../../Assets/icon/advancedIcon.svg";
+import { Select } from "antd";
 
 const Container = styled.div``;
 
@@ -9,6 +10,8 @@ const PostContainer = styled.div`
     padding: 0px 20px;
   }
 `;
+
+const SelectAntd = styled(Select)``;
 
 const FilterWrap = styled.div`
   position: relative;
@@ -97,4 +100,5 @@ export {
   FilterInputWrap,
   FilterSelect,
   FilterOption,
+  SelectAntd,
 };

@@ -7,8 +7,7 @@ import {
   FilterButtonWrap,
   IconsGenerics,
   PostContainer,
-  FilterSelect,
-  FilterOption,
+  SelectAntd,
 } from "./style";
 import Search from "../../Assets/image/loupe.png";
 import House from "../../Assets/icon/advancedIcon.svg";
@@ -23,7 +22,6 @@ import { Button, InputGeneral } from "../generics";
 import uzeReplace from "../../hooks/useReplace";
 import { useLocation, useNavigate } from "react-router-dom";
 import useSearch from "../../hooks/useSearch";
-import {Select} from "antd"
 
 
 
@@ -156,15 +154,15 @@ const Filter = () => {
                       width="203px"
                       placeholder="Size"
                     /> */}
-                    <FilterSelect defaultValue={44} width="203px" value="">
+                    <SelectAntd defaultValue={44} width="203px" value="">
                       {data.map( (value) => {
                         return (
-                          <FilterOption width="203px" value={value?.id} name="" id="">
+                          <SelectAntd.Option labelInValue width="203px" value={value?.id} name="" id="">
                             {value?.name}
-                          </FilterOption>
+                          </SelectAntd.Option>
                         );
                       } )}
-                    </FilterSelect>
+                    </SelectAntd>
                   </DropInputWrap>
                 </DropSection>
                 <DropSection>
